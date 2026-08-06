@@ -35,7 +35,7 @@ It covers primitive variable assignments, memory layout configurations, relation
 | **11** | **Mathematical Functions Library** | Continuous rounding, logarithm calculations, radians | [View Sections](#-cmath-library--algorithmic-helpers) |
 | **12** | **Booleans & Output Stream Manipulation** | Binary conversion states, `boolalpha` text-switches | [View Sections](#-boolean-states--stream-formatting) |
 | **13** | **Conditional Control Branching** | Sequential nested paths, multi-conditional bounds, ternary | [View Sections](#-conditional-control-branching-ifelse) |
-| **14** | **Switch Control Platforms** | Switch jump-tables, fall-through mechanics, `default` errors | [View Sections](#-switch-case-execution-platforms) |
+
 
 ---
 
