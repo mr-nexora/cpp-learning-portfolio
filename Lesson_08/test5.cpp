@@ -3,9 +3,9 @@ using namespace std;
 
 int main () {
 
-// Modulus
-int x = 10, y = 5;
-cout << "Modulus = " << x % y;
+    // String Data Type
+    string name = "John Doe";
+    cout << "My name is " << name;
 
     return 0;
 }

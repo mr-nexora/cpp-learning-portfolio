@@ -4,19 +4,17 @@ using namespace std;
 int main()
 {
 
-    // Using a Boolean Variable
-    int time = 13;
+    // Boolean Expressions
+    
+    // Eg 01:
+    int x = 10, y = 5;
+    cout << (x > y) << "\n\n"; // Output is 1 (True) 
+    cout << (y > x) << "\n\n"; // Output is 0 (False) 
 
-    bool istTime = time > 18;
+    // Eg 02:
+    int z  = 10;
+    cout << (z == 10);
 
-    if (istTime)
-    {
-        cout << "Good DAY!" << endl;
-    }
-    else
-    {
-        cout << "Good NIGHT!" << endl;
-    }
 
     return 0;
 }

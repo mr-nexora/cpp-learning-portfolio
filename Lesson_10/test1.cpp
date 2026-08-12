@@ -1,13 +1,12 @@
 #include <iostream>
 using namespace std;
 
-int main () {
+int main()
+{
 
-    // Max ()
-    int x = 5, y =10;
-
-    int MAX = max(x,y);
-    cout << "Max Value: " << MAX;
+    // C++ Strings
+    string greeting = "Hello";
+    cout << greeting;
 
     return 0;
 }

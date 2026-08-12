@@ -4,15 +4,15 @@ using namespace std;
 int main()
 {
 
-    // The else Statement
-    int mark = 60;
+    // Resetting Back With noboolalpha
 
-    if (mark > 35) {
-        cout << "You are PASS" <<endl;
-    }
-    else {
-        cout << "You are Fail" <<endl;        
-    }
+    bool isStudent = true;
+
+    cout << boolalpha;         // print as true/false
+    cout << isStudent << endl; // Outputs true
+
+    cout << noboolalpha;       // reset cout back to printing 1/0
+    cout << isStudent << endl; // Outputs 1
 
     return 0;
 }

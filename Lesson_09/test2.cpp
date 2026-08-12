@@ -1,16 +1,11 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
+int main () {
 
-    // String Concatenation
-    string firstName = "John";
-    string lastName = "Doe";
-
-    string fullName = firstName + " " + lastName;
-    cout << fullName;
-
+// Subtraction	
+int x = 10, y = 5;
+cout << "Subtraction = " << x - y;
 
     return 0;
 }

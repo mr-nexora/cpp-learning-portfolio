@@ -4,21 +4,11 @@ using namespace std;
 int main()
 {
 
-    // The else if Statement
-    int time = 10;
+    // Store the Result in a Boolean Variable
+    int x = 10, y = 5;
 
-    if (time >= 18)
-    {
-        cout << "Good Night!" << endl;
-    }
-    else if (time >= 12)
-    {
-        cout << "Good Evening!" << endl;
-    }
-    else
-    {
-        cout << "Good Morning!" << endl;
-    }
+    bool isGreater = x > y;
+    cout << isGreater; // Output is 1 (True)
 
     return 0;
 }

@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
 
-int main () {
+int main()
+{
 
-    // The if Statement
-    int x  = 10, y = 5;
+    // C++ Booleans
+    bool isStudent = true;
+    bool isStudyMaths = false;
 
-    if (x > y) {
-        cout << x << " is Greater than " << y <<endl;
-    }
+    cout << isStudent << endl;    // Output is 1 (True)
+    cout << isStudyMaths << endl; // Output is 0 (False)
 
     return 0;
-
 }

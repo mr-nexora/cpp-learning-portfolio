@@ -1,18 +1,13 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
+int main () {
 
-    // Printing true/false With boolalpha
-    
-    bool isStudent = true;
-    bool isStudyMaths = false;
+    // Min ()
+    int x = 5, y =10;
 
-    cout << boolalpha; // enable printing "true"/"false"
-
-    cout << isStudent << endl;    // Outputs true
-    cout << isStudyMaths << endl; // Outputs false
+    int MIN = min(x,y);
+    cout << "Min Value: " << MIN;
 
     return 0;
 }

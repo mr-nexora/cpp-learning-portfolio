@@ -1,13 +1,11 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-int main()
-{
+int main () {
 
-    // at()
-    string text = "Ceylon";
-    cout << text.at(2); // Output: y
+// Modulus
+int x = 10, y = 5;
+cout << "Modulus = " << x % y;
 
     return 0;
 }

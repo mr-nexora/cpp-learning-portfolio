@@ -1,13 +1,11 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-int main()
-{
+int main () {
 
-    // length() / size()
-    string text = "Hello";
-    cout << text.length(); // Output: 5
+// Multiplication
+int x = 10, y = 5;
+cout << "Multiplication = " << x * y;
 
     return 0;
 }

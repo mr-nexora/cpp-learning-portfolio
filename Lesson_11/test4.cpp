@@ -1,20 +1,21 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main()
 {
 
-    // Boolean Expressions
-    
-    // Eg 01:
-    int x = 10, y = 5;
-    cout << (x > y) << "\n\n"; // Output is 1 (True) 
-    cout << (y > x) << "\n\n"; // Output is 0 (False) 
+    // Rounding & Estimation
 
-    // Eg 02:
-    int z  = 10;
-    cout << (z == 10);
+    // round: Rounds to the nearest whole number
+    cout << "round value: " << round(4.6) << endl; // Output: 5
+    cout << "round value: " << round(4.3);         // Output: 4
 
+   // ceil: Always rounds upwards to the next integer
+    cout << "ceil value: " << ceil(4.1); // Output: 5
+
+    // floor: Always rounds downwards to the previous integer
+    cout << "floor value: " << floor(4.9); // Output: 4
 
     return 0;
 }

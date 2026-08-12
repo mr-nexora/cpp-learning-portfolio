@@ -1,13 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int main () {
+int main()
+{
 
-    // Min ()
-    int x = 5, y =10;
+    // String Concatenation
+    string firstName = "John";
+    string lastName = "Doe";
 
-    int MIN = min(x,y);
-    cout << "Min Value: " << MIN;
+    string fullName = firstName + " " + lastName;
+    cout << fullName;
+
 
     return 0;
 }

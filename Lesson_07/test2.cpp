@@ -1,29 +1,26 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
+int main () {
 
-    // Numeric Data Types
+    int x,y,sum,addition,multification,divition,mod;
 
-    // Int Data Types
-    int myAge = 22;
-    cout << "Int Data Type = " << myAge << endl;
+    // Simple Calculator
+    cout << "======================================" <<endl;
+    cout << "======:-- Simple Calculator (Subtraction '-')  --:======" <<endl;
+    cout << "======================================" <<endl;
 
-    // Float Data Types
-    float myNum = 2.99;
-    cout << "Float Data Type = " << myNum << endl;
+    cout << "Enter Number 1: ";
+    cin >> x;
 
-    // Double Data Types
-    double myNUM = 3.99;
-    cout << "Double Data Type = " << myNUM << endl;
+    cout << "Enter Number 2: ";
+    cin >> y;
 
-    // Scientific Numbers
-    float x = 35e3;
-    double y = 12E4;
-
-    cout << x << endl;
-    cout << y << endl;
+    addition = x - y;
+    
+    cout << "======================================" <<endl;
+    cout << "======:-- Addition is " << addition << " --:====== " <<endl;
+    cout << "======================================" <<endl;
 
     return 0;
 }

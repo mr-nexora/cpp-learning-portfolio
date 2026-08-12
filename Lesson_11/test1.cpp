@@ -1,15 +1,13 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
+int main () {
 
-    // C++ Booleans
-    bool isStudent = true;
-    bool isStudyMaths = false;
+    // Max ()
+    int x = 5, y =10;
 
-    cout << isStudent << endl;    // Output is 1 (True)
-    cout << isStudyMaths << endl; // Output is 0 (False)
+    int MAX = max(x,y);
+    cout << "Max Value: " << MAX;
 
     return 0;
 }

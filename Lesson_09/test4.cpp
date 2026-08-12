@@ -1,17 +1,11 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-int main()
-{
+int main () {
 
-    // empty()
-    string text = "";
-
-    if (text.empty())
-    {
-        cout << "String is empty"; // This will print
-    }
+// Division
+int x = 10, y = 5;
+cout << "Division = " << x / y;
 
     return 0;
 }

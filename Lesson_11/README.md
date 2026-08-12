@@ -107,112 +107,201 @@ Happy Coding! 🚀
 
 ---
 
-Elakirima! Lesson 12 eka thiyenne C++ Booleans handling saha output formatting (boolalpha, noboolalpha) ekka booleans expressions variable ekaka store karaganne kohomada කියන එක ගැන.
+# 🧮 Lesson 11: C++ Math Operators & `<cmath>` Library
 
-Oya deepu concepts tika clean visual hierarchy ekakatayi, formatting rules text ekakatayi pahasuwen galapala README.md file eka sakas kala. Hama path ekakatama oya deepu images (img1.jpg sita img5.jpg dhakwa) adala thanwala thiyala thiyenne.
-
-Me thiyenne oyage Lesson 12: C++ Booleans README.md file eka:
-
-Markdown
-<div align="center">
-
-# 🌐 C++ Learning Portfolio
-### *For Undergraduate Computer Science Studies*
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mrnexora/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mr-nexora/)
-
-</div>
-
----
-# ⚖️ Lesson 12: C++ Booleans & Stream Manipulators
-
-This lesson explores logical truth states in C++. We cover basic boolean values, how to control console output formatting using the `boolalpha` and `noboolalpha` stream manipulators, and techniques for processing and storing boolean expression evaluations.
+This lesson explores algorithmic computation properties in C++. We cover basic comparison helper features (`max`/`min`) alongside complex mathematical operations unlocked via the standard standard library headers.
 
 ---
 
-## 1. Basic Boolean Outputs (Binary Representation)
+## 🔍 1. Basic Comparisons: `max()` and `min()`
 
-A `bool` data type holds one of two literal values: `true` or `false`. By default, when printing boolean types, the C++ standard output stream maps `true` directly to **`1`** and `false` to **`0`**.
+The `max()` and `min()` functions are available in the standard algorithm/utility pool by default. They allow you to easily find the highest or lowest values between two compared terms.
 
+### 🔺 Maximum Value
 ```CPP
     // test1.cpp
-    bool isStudent = true;
-    bool isStudyMaths = false;
+    int x = 5, y =10;
 
-    cout << isStudent << endl;    // Output is 1 (True)
-    cout << isStudyMaths << endl; // Output is 0 (False)
+    int MAX = max(x,y);
+    cout << "Max Value: " << MAX;
 ```
 
 ## ![img](img/img1.jpg)
 
 ---
 
-## 2. Formatting Output Strings: boolalpha & noboolalpha
-To switch from numerical representations to explicit text layouts within your console logs, C++ provides stream manipulators to adjust terminal outputs.
+## 🔻 Minimum Value
 
-### Method A: Enabling Textual Outputs with boolalpha
-Inserting boolalpha into the standard output chain instructs the stream to display text strings ("true" / "false") instead of raw binary digits.
 ```CPP
-    // test2.cpp
-    bool isStudent = true;
-    bool isStudyMaths = false;
+    // test1.cpp
+    int x = 5, y =10;
 
-    cout << boolalpha; // enable printing "true"/"false"
-
-    cout << isStudent << endl;    // Outputs true
-    cout << isStudyMaths << endl; // Outputs false
+    int MIN = min(x,y);
+    cout << "Min Value: " << MIN;
 ```
 
 ## ![img](img/img2.jpg)
 
 ---
 
-### Method B: Resetting to Default with noboolalpha
-To undo changes made by boolalpha and switch back to numeric output (1/0), add the noboolalpha manipulator back into your output sequence.
+## C++ <cmath> Library
+To access advanced algebraic, trigonometric, and rounding structures, you must include the standard header package: #include <cmath>.
+
+## Math Functions
+
+### Basic & Power Operations
+
+#### sqrt: Finds the square root of a number
+
 ```CPP
-    // test3.cpp
-    bool isStudent = true;
-
-    cout << boolalpha;         // print as true/false
-    cout << isStudent << endl; // Outputs true
-
-    cout << noboolalpha;       // reset cout back to printing 1/0
-    cout << isStudent << endl; // Outputs 1
+    cout << "sqrt value: " << sqrt(25); // Output: 5
 ```
 
 ## ![img](img/img3.jpg)
 
 ---
 
-## 3. Processing Boolean Expressions
-A boolean expression evaluates comparison inputs and resolves them into a single final boolean state result.
-```CPP
-    // test4.cpp
-    // Eg 01:
-    int x = 10, y = 5;
-    cout << (x > y) << "\n\n"; // Output is 1 (True)
-    cout << (y > x) << "\n\n"; // Output is 0 (False)
+#### cbrt: Finds the cube root of a number
 
-    // Eg 02:
-    int z  = 10;
-    cout << (z == 10);
+```CPP
+    cout << "cbrt value: " << cbrt(27); // Output: 3
 ```
 
 ## ![img](img/img4.jpg)
 
 ---
 
-## 4. Storing Expression Results in Variables
-Instead of printing expressions immediately, you can compute comparative operations beforehand and save their structural logic state inside a allocated bool memory location for later execution checks.
-```CPP
-    // test5.cpp
-    int x = 10, y = 5;
+#### pow: Raises the base to the power of exponent (2 cubed)
 
-    bool isGreater = x > y;
-    cout << isGreater; // Output is 1 (True)
+```CPP
+    cout << "pow value: " << pow(2, 3); // Output: 8
 ```
 
 ## ![img](img/img5.jpg)
 
 ---
+
+#### abs: Converts negative numbers into positive numbers
+
+```CPP
+    cout << "abs value: " << abs(-15); // Output: 15
+```
+
+## ![img](img/img6.jpg)
+
+---
+
+#### fmod: Finds the remainder of a decimal division (5.5 / 2)
+
+```CPP
+    cout << "fmod value: " << fmod(5.5, 2.0); // Output: 1.5
+```
+
+## ![img](img/img7.jpg)
+
+---
+
+### Rounding & Estimation
+
+#### round: Rounds to the nearest whole number
+
+```CPP
+    cout << "round value: " << round(4.6) << endl; // Output: 5
+    cout << "round value: " << round(4.3);         // Output: 4
+```
+
+## ![img](img/img8.jpg)
+
+---
+
+#### ceil: Always rounds upwards to the next integer
+
+```CPP
+    cout << "ceil value: " << ceil(4.1); // Output: 5
+```
+
+## ![img](img/img9.jpg)
+
+---
+
+#### floor: Always rounds downwards to the previous integer
+
+```CPP
+    cout << "floor value: " << floor(4.9); // Output: 4
+```
+
+## ![img](img/img10.jpg)
+
+---
+
+### Logarithmic & Exponential
+
+#### exp: Calculates e raised to the power of x (e^1)
+
+```CPP
+    cout << "exp value: " << exp(1); // Output: 2.71828
+```
+
+## ![img](img/img11.jpg)
+
+---
+
+#### log: Calculates the natural logarithm (base-e)
+
+```CPP
+    cout << "log value: " << log(2.71828); // Output: 1
+```
+
+## ![img](img/img12.jpg)
+
+---
+
+#### log10: Calculates the common logarithm (base-10)
+
+```CPP
+    cout << "log value: " << log10(100); // Output: 2
+```
+
+## ![img](img/img13.jpg)
+
+---
+
+#### log2: Calculates the binary logarithm (base-2)
+
+```CPP
+    cout << "log value: " << log2(8); // Output: 3
+```
+
+## ![img](img/img14.jpg)
+
+---
+
+### Trigonometric Functions
+
+#### sin: Calculates the sine of an angle (input must be in radians)
+
+```CPP
+    cout << "sin value: " << sin(1.5708); // Output: 1 (approx for 90 degrees)
+```
+
+## ![img](img/img15.jpg)
+
+---
+
+#### cos: Calculates the cosine of an angle in radians
+
+```CPP
+    cout << "cos value: " << cos(0); // Output: 1
+```
+
+## ![img](img/img16.jpg)
+
+---
+
+#### tan: Calculates the tangent of an angle in radians
+
+```CPP
+    cout << "tan value: " << tan(0.7854); // Output: 1 (approx for 45 degrees)
+```
+
+## ![img](img/img17.jpg)

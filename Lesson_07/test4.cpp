@@ -3,17 +3,24 @@ using namespace std;
 
 int main () {
 
-    // Character Data Types
-    cout << "Eg :- 01 \n";
-    char myGrade = 'A';
-    cout << myGrade <<endl;
+    int x,y,sum,addition,multification,divition,mod;
 
+    // Simple Calculator
+    cout << "======================================" <<endl;
+    cout << "======:-- Simple Calculator (Divition '/')  --:======" <<endl;
+    cout << "======================================" <<endl;
 
-    cout << "\n\nEg :- 02 \n";    
-    char a=65, b=66, c=67;
-    cout << a <<endl;
-    cout << b <<endl;
-    cout << c <<endl;
+    cout << "Enter Number 1: ";
+    cin >> x;
+
+    cout << "Enter Number 2: ";
+    cin >> y;
+
+    divition = x / y;
+
+    cout << "======================================" <<endl;
+    cout << "======:-- Divition is " << divition << " --:====== " <<endl;
+    cout << "======================================" <<endl;
 
     return 0;
 }

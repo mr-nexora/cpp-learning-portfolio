@@ -1,19 +1,19 @@
 #include <iostream>
 using namespace std;
 
-int main () {
+int main()
+{
 
-// Increment
-int x = 5;
-int y = 5;
+    // The auto Keyword
+    auto x = 5;
+    auto y = 3.55;
+    auto name = "John Doe";
+    auto grade = 'A';
 
-// Pre-Increment (++a)
-cout << "Pre-Increment (++x) Value: " << ++x << endl; 
-cout << "Now value of x: " << x << endl << endl;
-
-// Post-Increment (y++)
-cout << "Post-Increment (y++) value: " << y++ << endl; 
-cout << "Now value of y: " << y << endl;
+    cout << x << endl;
+    cout << y << endl;
+    cout << name << endl;
+    cout << grade << endl;
 
     return 0;
 }

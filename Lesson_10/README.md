@@ -107,201 +107,249 @@ Happy Coding! 🚀
 
 ---
 
-# 🧮 Lesson 11: C++ Math Operators & `<cmath>` Library
+# 🔤 Lesson 10: C++ Strings Manipulation & Functions
 
-This lesson explores algorithmic computation properties in C++. We cover basic comparison helper features (`max`/`min`) alongside complex mathematical operations unlocked via the standard standard library headers.
+This lesson covers text processing architecture in C++. We explore standard declarations, concatenation syntax, utility functions for manipulation, and methods like `getline()` to resolve stream delimitation issues during user input extraction.
 
 ---
 
-## 🔍 1. Basic Comparisons: `max()` and `min()`
+## 📌 1. Basic Standard Strings & Concatenation
 
-The `max()` and `min()` functions are available in the standard algorithm/utility pool by default. They allow you to easily find the highest or lowest values between two compared terms.
+Strings are objects that represent sequences of characters. To join two strings sequentially, C++ provides the simple operators (`+`).
 
-### 🔺 Maximum Value
+### 🔹 Basic Initialization
+
 ```CPP
     // test1.cpp
-    int x = 5, y =10;
-
-    int MAX = max(x,y);
-    cout << "Max Value: " << MAX;
+    string greeting = "Hello";
+    cout << greeting;
 ```
 
 ## ![img](img/img1.jpg)
 
 ---
 
-## 🔻 Minimum Value
+## String Concatenation
 
 ```CPP
-    // test1.cpp
-    int x = 5, y =10;
+    // test2.cpp
+    string firstName = "John";
+    string lastName = "Doe";
 
-    int MIN = min(x,y);
-    cout << "Min Value: " << MIN;
+    string fullName = firstName + " " + lastName;
+    cout << fullName;
 ```
 
 ## ![img](img/img2.jpg)
 
 ---
 
-## C++ <cmath> Library
-To access advanced algebraic, trigonometric, and rounding structures, you must include the standard header package: #include <cmath>.
+## String Functions
 
-## Math Functions
+### Capacity & Size
 
-### Basic & Power Operations
-
-#### sqrt: Finds the square root of a number
-
+#### length() / size()
+Both functions return the total count of characters embedded inside the string sequence. They are identical in execution functionality.
 ```CPP
-    cout << "sqrt value: " << sqrt(25); // Output: 5
+    // test3.cpp
+    string text = "Hello";
+    cout << text.length(); // Output: 5
 ```
 
 ## ![img](img/img3.jpg)
 
 ---
 
-#### cbrt: Finds the cube root of a number
-
+#### empty()
+Returns a boolean value (true/1 or false/0) verifying whether a string contains zero data.
 ```CPP
-    cout << "cbrt value: " << cbrt(27); // Output: 3
+    // test4.cpp
+    string text = "";
+
+    if (text.empty())
+    {
+        cout << "String is empty"; // This will print
+    }
 ```
 
 ## ![img](img/img4.jpg)
 
 ---
 
-#### pow: Raises the base to the power of exponent (2 cubed)
+### Element Access & Search
 
+#### at()
+Returns the specific character located at a given index boundary parameter. Indexes begin sequentially at 0.
 ```CPP
-    cout << "pow value: " << pow(2, 3); // Output: 8
+    // test5.cpp
+    string text = "Ceylon";
+    cout << text.at(2); // Output: y
 ```
 
 ## ![img](img/img5.jpg)
 
 ---
 
-#### abs: Converts negative numbers into positive numbers
-
+#### find()
+Searches for a specific substring inside the source variable and returns the starting index of its first occurrence.
 ```CPP
-    cout << "abs value: " << abs(-15); // Output: 15
+    // test6.cpp
+    string text = "I love C++ coding";
+    int index = text.find("C++");
+    cout << index; // Output: 7
 ```
 
 ## ![img](img/img6.jpg)
 
 ---
 
-#### fmod: Finds the remainder of a decimal division (5.5 / 2)
+### Modification & Substrings
 
+#### append()
+Appends another string sequence directly onto the end of the existing text block structure.
 ```CPP
-    cout << "fmod value: " << fmod(5.5, 2.0); // Output: 1.5
+    // test7.cpp
+    string text = "Sri ";
+    text.append("Lanka");
+    cout << text; // Output: Sri Lanka
 ```
 
 ## ![img](img/img7.jpg)
 
 ---
 
-### Rounding & Estimation
-
-#### round: Rounds to the nearest whole number
-
+#### push_back()
+Appends a single individual character literal onto the absolute end boundary point.
 ```CPP
-    cout << "round value: " << round(4.6) << endl; // Output: 5
-    cout << "round value: " << round(4.3);         // Output: 4
+    // test8.cpp
+    string text = "Car";
+    text.push_back('s');
+    cout << text; // Output: Cars
 ```
 
 ## ![img](img/img8.jpg)
 
 ---
 
-#### ceil: Always rounds upwards to the next integer
-
+#### pop_back()
+Removes the absolute final character element from the end of the string block.
 ```CPP
-    cout << "ceil value: " << ceil(4.1); // Output: 5
+    // test9.cpp
+    string text = "Apple";
+    text.pop_back();
+    cout << text; // Output: Appl
 ```
 
 ## ![img](img/img9.jpg)
 
 ---
 
-#### floor: Always rounds downwards to the previous integer
-
+#### substr()
+Extracts a specific segment from a string. It requires two arguments: substr(starting_index, length_of_segment).
 ```CPP
-    cout << "floor value: " << floor(4.9); // Output: 4
+    // test10.cpp
+    string text = "Banana";
+    string small = text.substr(2, 4);
+    cout << small; // Output: nana
 ```
 
 ## ![img](img/img10.jpg)
 
 ---
 
-### Logarithmic & Exponential
-
-#### exp: Calculates e raised to the power of x (e^1)
-
+#### erase()
+Deletes a defined chunk of text from the source sequence: erase(starting_index, element_count).
 ```CPP
-    cout << "exp value: " << exp(1); // Output: 2.71828
+    // test11.cpp
+    string text = "ABC123XYZ";
+    text.erase(3, 3); // Removes "123"
+    cout << text;     // Output: ABCXYZ
 ```
 
 ## ![img](img/img11.jpg)
 
 ---
 
-#### log: Calculates the natural logarithm (base-e)
-
+#### replace()
+Replaces a specified portion of a string with a new text block: replace(starting_index, length, new_string).
 ```CPP
-    cout << "log value: " << log(2.71828); // Output: 1
+    // test12.cpp
+    string text = "I have a dog";
+    text.replace(9, 3, "cat");
+    cout << text; // Output: I have a cat
 ```
 
 ## ![img](img/img12.jpg)
 
 ---
 
-#### log10: Calculates the common logarithm (base-10)
-
+#### clear()
+Wipes out all stored text character items from the memory variable string block instantly, dropping its final allocation size down to zero.
 ```CPP
-    cout << "log value: " << log10(100); // Output: 2
+    // test13.cpp
+    string text = "Welcome";
+    text.clear();
+    cout << "Size is: " << text.size(); // Output: Size is: 0
 ```
 
 ## ![img](img/img13.jpg)
 
 ---
 
-#### log2: Calculates the binary logarithm (base-2)
+### Comparison
 
+#### compare()
+Compares two strings lexicographically. It returns 0 if both are identical, a value less than 0 if the first string is lexicographically smaller, or greater than 0 if it is larger.
 ```CPP
-    cout << "log value: " << log2(8); // Output: 3
+    // test14.cpp
+    string str1 = "Apple";
+    string str2 = "Apple";
+
+    if (str1.compare(str2) == 0)
+    {
+        std::cout << "Both strings match"; // This will print
+    }
 ```
 
 ## ![img](img/img14.jpg)
 
 ---
 
-### Trigonometric Functions
+## Capturing User Inputs: Resolving Whitespace Breaks
+As introduced in prior input modules, the standard extraction mechanism cin >> stops reading when it encounters whitespace. To read a full line of text with spaces safely, use the getline() function.
 
-#### sin: Calculates the sine of an angle (input must be in radians)
+### The Problem with cin >>
+If you pass "John Doe", cin >> will truncate data at the first space block, reading only "John".
 
+### The Solution: Using getline()
+The getline(cin, stringVariable) function reads the entire input stream line continuously until the user presses Enter.
 ```CPP
-    cout << "sin value: " << sin(1.5708); // Output: 1 (approx for 90 degrees)
+    // test15.cpp   
+/* 
+     C++ User Input Strings
+     string fullName;
+
+     cout << "Enter your Full Name: ";
+     cin >> fullName;
+
+     cout << "Your name is: " << fullName;
+
+    // Enter Full Name = John Doe
+    // Your name is: John
+
+ */
+    // Fix this
+    string fullName;
+
+    cout << "Enter your Full Name: ";
+    getline(cin,fullName);
+
+    cout << "Your name is: " << fullName;
+
+    // Enter Full Name = John Doe
+    // Your name is: John Doe
 ```
 
 ## ![img](img/img15.jpg)
 
 ---
-
-#### cos: Calculates the cosine of an angle in radians
-
-```CPP
-    cout << "cos value: " << cos(0); // Output: 1
-```
-
-## ![img](img/img16.jpg)
-
----
-
-#### tan: Calculates the tangent of an angle in radians
-
-```CPP
-    cout << "tan value: " << tan(0.7854); // Output: 1 (approx for 45 degrees)
-```
-
-## ![img](img/img17.jpg)

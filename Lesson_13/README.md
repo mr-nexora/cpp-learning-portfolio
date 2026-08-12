@@ -104,45 +104,27 @@ This repository is built through continuous practice using educational resources
 Happy Coding! 🚀
 
 </div>
----
-
-# 🎛️ Lesson 14: C++ Switch Statements
-
-This lesson introduces the `switch` statement as an efficient alternative to multi-stage `if...else if` chains. You will learn how to test an expression against multiple matching constant literal values, master the execution boundaries of the `break` keyword, and configure fallback operations via the `default` keyword.
 
 ---
 
-## 📌 1. Introduction to the `switch` Structure
+# 🔀 Lesson 13: C++ Conditional Branching (If...Else)
 
-The `switch` statement evaluates an integral or character expression once and compares its result directly against values specified in structural **`case`** labels. It offers cleaner syntax and faster execution maps over long nested conditions due to compiler jump-table optimizations.
+This lesson explores program control flow in C++. You will master standard conditional execution statements, logic encapsulation inside boolean variables, nested evaluation structures, short-hand conditional expressions (Ternary Operator), and multi-condition parsing using logical operators.
+
+---
+
+## 🛑 1. The `if` Statement
+
+The `if` block executes a target block of code only if its underlying relational expression evaluates to **`true`** (`1`).
+
+### 🔹 Scheme A: Direct Expression Checks
 
 ```CPP
     // test1.cpp
-    int day = 4;
+    int x  = 10, y = 5;
 
-    switch (day)
-    {
-    case 1:
-        cout << "Monday";
-        break;
-    case 2:
-        cout << "Tuesday";
-        break;
-    case 3:
-        cout << "Wednesday";
-        break;
-    case 4:
-        cout << "Thursday";
-        break;
-    case 5:
-        cout << "Friday";
-        break;
-    case 6:
-        cout << "Saturday";
-        break;
-    case 7:
-        cout << "Sunday";
-        break;
+    if (x > y) {
+        cout << x << " is Greater than " << y <<endl;
     }
 ```
 
@@ -150,48 +132,246 @@ The `switch` statement evaluates an integral or character expression once and co
 
 ---
 
-## 2. The Crucial Role of the break Keyword
-
-When a matching case value is detected, execution jumps straight to that specific block. The break keyword tells the compiler to break out of the switch statement completely once that block is finished.
-
-⚠️ The Fall-Through Effect: If you omit a break; statement at the end of a case block, execution does not stop! The compiler continues down into the next sequential case blocks, running their code blindly regardless of whether the criteria keys match or not, until a break keyword or the end of the switch block is reached.
-
----
-
-## 3. Handling Unmatched Criteria: The default Keyword
-
-The default keyword specifies a fallback code block that runs automatically if none of the explicit case expressions match the evaluated criteria variable. Think of it as the final structural equivalent to an else statement inside a branching block.
+### 🔹 Scheme B: Evaluating a Pre-computed Boolean Property
 
 ```CPP
     // test2.cpp
-    int day = 4;
+    int x = 15, y = 25;
+    bool isGreater = x < y;
 
-    switch (day)
+    if (isGreater)
     {
-    case 1:
-        cout << "Monday";
-        break;
-    case 2:
-        cout << "Tuesday";
-        break;
-    case 3:
-        cout << "Wednesday";
-        break;
-    case 4:
-        cout << "Thursday";
-        break;
-    case 5:
-        cout << "Friday";
-        break;
-    case 6:
-        cout << "Saturday";
-        break;
-    case 7:
-        cout << "Sunday";
-        break;
-    default:
-        cout << "Looking forward to the Weekend";
+        cout << x << " is greater than " << y << endl;
     }
 ```
 
 ## ![img](img/img2.jpg)
+
+---
+
+## 2. The else Statement
+The else statement provides an alternative fallback code block that executes automatically whenever the preceding if condition resolves to false (0).
+
+### 🔹 Scheme A: Simple Binary Decisions
+
+```CPP
+    // test3.cpp
+    int mark = 60;
+
+    if (mark > 35) {
+        cout << "You are PASS" <<endl;
+    }
+    else {
+        cout << "You are Fail" <<endl;
+    }
+```
+
+## ![img](img/img3.jpg)
+
+---
+
+### 🔹 Scheme B: Boolean Variable Alternative Routing
+
+```CPP
+    // test4.cpp
+    int time = 13;
+
+    bool istTime = time > 18;
+
+    if (istTime)
+    {
+        cout << "Good DAY!" << endl;
+    }
+    else
+    {
+        cout << "Good NIGHT!" << endl;
+    }
+```
+
+## ![img](img/img4.jpg)
+
+---
+
+## 3. The else if Statement (Multi-Way Branching)
+When you need to evaluate multiple mutually exclusive conditions in sequence, use the else if statement. The chain stops executing as soon as one condition evaluates to true.
+
+### 🔹 Scheme A: Sequential Direct Integer Checks
+
+```CPP
+    // test5.cpp
+    int time = 10;
+
+    if (time >= 18)
+    {
+        cout << "Good Night!" << endl;
+    }
+    else if (time >= 12)
+    {
+        cout << "Good Evening!" << endl;
+    }
+    else
+    {
+        cout << "Good Morning!" << endl;
+    }
+```
+
+## ![img](img/img5.jpg)
+
+---
+
+### 🔹 Scheme B: Evaluating Multiple Stored Boolean Targets
+
+```CPP
+    // test6.cpp
+    int time = 16;
+
+    bool isMorning = time < 12;
+    bool isDay = time < 18;
+
+    if (isMorning)
+    {
+        cout << "Good morning.";
+    }
+    else if (isDay)
+    {
+        cout << "Good day.";
+    }
+    else
+    {
+        cout << "Good evening.";
+    }
+```
+
+## ![img](img/img6.jpg)
+
+---
+
+## 4. Short Hand If...Else: The Ternary Operator (? :)
+The Ternary Operator allows you to compress standard if...else statements into a single line. It is highly efficient for clean inline value assignments.
+
+### Syntax:
+```CPP
+variable = (condition) ? expressionTrue : expressionFalse;
+```
+---
+### 🔹 Standard Shorthand Assignment
+```CPP
+    // test7.cpp
+    /* int mark = 60;
+
+    if (mark > 35) {
+        cout << "You are PASS" <<endl;
+    }
+    else {
+        cout << "You are Fail" <<endl;
+    }
+ */
+
+    // C++ Short Hand If Else
+
+    int mark = 60;
+
+    string result = (mark > 35) ? "You are PASS" : "Your are FAIL";
+    cout << result << endl;
+
+    // cout << (mark > 35) ? "You are PASS" : "Your are FAIL";
+```
+
+## ![img](img/img7.jpg)
+
+---
+
+### 🔹 Advanced Formatting: Nested Ternary Expressions
+Ternary statements can be nested sequentially to simulate complex else if structures concisely.
+
+```CPP
+    // test8.cpp
+    int time = 10;
+
+    string greet = (time >= 18)   ? "Good Night!"
+                   : (time >= 12) ? "Good Afternoon!"
+                                  : "Good Morning!";
+
+    cout << greet << endl;
+```
+
+## ![img](img/img8.jpg)
+
+---
+
+## 5. Nested if Statements
+An if block placed inside another if block is called a nested if. This approach allows you to perform secondary checks only after an initial condition has passed.
+
+
+```CPP
+    // test9.cpp
+    int x = 15;
+    int y = 25;
+
+    if (x > 10)
+    {
+        cout << "x is greater than 10\n";
+
+        // Nested if
+        if (y > 20)
+        {
+            cout << "y is also greater than 20\n";
+        }
+    }
+```
+
+## ![img](img/img9.jpg)
+
+---
+
+## 6. Integrating Logical Operators into Conditions
+Instead of nesting multiple if lines, you can combine relational checks within a single statement using Logical Operators (&&, ||, !).
+
+### 🔺 A. Logical AND (&&)
+Executes the code block only if every single sub-condition evaluates to true.
+
+```CPP
+    // test10.cpp
+    int x = 5, y = 10, z = 25;
+
+    if (x < y && z > y)
+    {
+        cout << "Both conditions are true";
+    }
+```
+
+## ![img](img/img10.jpg)
+
+---
+
+### 🔺 B. Logical OR (||)
+Executes the code block if at least one of the conditions evaluates to true.
+
+```CPP
+    // test11.cpp
+    int x = 5, y = 10, z = 25;
+
+    if (x > y || z > y)
+    {
+        cout << "At least one condition is true";
+    }
+```
+
+## ![img](img/img11.jpg)
+
+---
+
+### 🔺 C. Logical NOT (!)
+Inverts the boolean state of the evaluated expression (turns true into false and vice versa).
+
+```CPP
+    // test12.cpp
+    int x = 5, y = 10;
+
+    if (!(x > y ))
+    {
+        cout << "x is NOT greater than y";
+    }
+```
+
+## ![img](img/img12.jpg)

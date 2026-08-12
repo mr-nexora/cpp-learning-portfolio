@@ -2,12 +2,25 @@
 using namespace std;
 
 int main () {
-    // Bool Data Type
-    bool isStudent = true;
-    bool eatFish = false;
+
+    int x,y,sum,addition,multification,divition,mod;
+
+    // Simple Calculator
+    cout << "======================================" <<endl;
+    cout << "======:-- Simple Calculator (Multification '*')  --:======" <<endl;
+    cout << "======================================" <<endl;
+
+    cout << "Enter Number 1: ";
+    cin >> x;
+
+    cout << "Enter Number 2: ";
+    cin >> y;
+
+    multification = x * y;
     
-    cout << isStudent << endl; // Output is 1 (True)
-    cout << eatFish << endl; // Output is 0 (False)
-    
+    cout << "======================================" <<endl;
+    cout << "======:-- Multification is " << multification << " --:====== " <<endl;
+    cout << "======================================" <<endl;
+
     return 0;
 }
